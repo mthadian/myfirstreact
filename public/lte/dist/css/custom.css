@@ -1,0 +1,28 @@
+outer-content-wrapper {
+    padding-top: 70px;
+
+  }
+  .pie_progress {
+    width: 160px;
+    margin: 10px auto;
+  }
+  @media all and (max-width: 768px) {
+    .pie_progress {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+/*
+  div.box {
+    
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+
+  div.panel {
+    
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+  */
+  
