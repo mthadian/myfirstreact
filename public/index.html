@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" type="text/css">
     <title>React App</title>
   </head>
-  <body class="hold-transition skin-purple fixed sidebar-mini">
+  <body class="hold-transition skin-blue fixed sidebar-mini">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- Site wrapper -->
 <div class="wrapper">
@@ -56,9 +56,9 @@
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>T</b>M<b>P</b></span>
+      <span class="logo-mini"><b>D</b>N<b>R</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>TILL</b> MANAGEMENT</span>
+      <span class="logo-lg"><b>DYNAMIC</b> REPORTS</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-default ">
@@ -227,174 +227,6 @@
           </ul>
           
         </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-bank"></i> <span>BRANCH</span>
-            <span class="pull-right-container">
-             <i class="fa fa-angle-left pull-right"></i>
-             <small class="label pull-right bg-yellow" id="m_lblbranch_tillspending"></small>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            
-
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-industry"></i> <span>ORGANIZATIONS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><i class="fa fa-circle-o text-aqua"></i> All <small class="label pull-right bg-aqua" id="lblbranch_orgsall"></small></a></li>
-              
-                <li><i class="fa fa-circle-o text-green"></i> Approved <small class="label pull-right bg-green" id="lblbranch_orgsapproved"></small></a></li>
-                <li><i class="fa fa-circle-o text-yellow"></i> Pending<small class="label pull-right bg-yellow" id="lblbranch_orgspending"></small></a></li>
-              
-                <li><i class="fa fa-circle-o text-red"></i> Rejected <small class="label pull-right bg-red" id="lblbranch_orgsrejected"></small></a></li>
-              
-               
-              </ul>
-            </li>
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-briefcase"></i> <span>TILLS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <!--<li><a href="#"><i class="fa fa-circle-o text-aqua"></i> All Tills</a></li>-->
-                <li> <a href="/branch_tillsall"><i class="fa fa-circle-o text-aqua"></i> All <small class="label pull-right bg-aqua" id="lblbranch_tillsall"></small></a></li>
-                <li><i class="fa fa-circle-o text-green"></i> Approved <small class="label pull-right bg-green" id="lblbranch_tillsapproved"></small></a></li>
-                <li><a href="/tillspending"><i class="fa fa-circle-o text-yellow"></i> Pending<small class="label pull-right bg-yellow" id="lblbranch_tillspending"></small></a></li>
-                <li><a href="/tillsrejected"><i class="fa fa-circle-o text-red"></i> Rejected<small class="label pull-right bg-red" id="lblbranch_tillsrejected"></small></a></li>
-               
-              </ul>
-              <!--vcard-->
-            </li>
-            <li class="treeview">
-              <a href="#"><i class="fa fa-vcard"></i> <span>OPERATORS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/operators"><i class="fa fa-circle-o text-aqua"></i> All </a></li>
-                <!---
-                <li><a href="#"><i class="fa fa-circle-o text-green"></i> Approved </a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Pending </a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> Rejected </a></li>
-              -->
-               
-              </ul>
-              <!--vcard-->
-            </li>
-            
-          </ul>
-        </li>
-
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-android"></i> <span>APP</span>
-            <span class="pull-right-container">
-              
-             <i class="fa fa-angle-left pull-right"></i>
-             <small class="label pull-right bg-yellow" id="m_lblapp_tillspending"></small>
-            
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            
-
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-industry"></i> <span>ORGANIZATIONS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/app_orgsall"><i class="fa fa-circle-o text-aqua"></i> All<small class="label pull-right bg-aqua" id="lblapp_orgsall"></small></a></li>
-                <li><a href="/app_orgsapproved"><i class="fa fa-circle-o text-green"></i> Approved  <small class="label pull-right bg-green" id="lblapp_orgsapproved"></small> </a></li>
-                <li><a href="/app_orgspending"><i class="fa fa-circle-o text-yellow"></i> Pending <small class="label pull-right bg-yellow" id="lblapp_orgspending"></small></a></li>
-                <li><a href="/app_orgsrejected"><i class="fa fa-circle-o text-red"></i> Rejected <small class="label pull-right bg-red" id="lblapp_orgsrejected"></small></a></li>
-               
-              </ul>
-            </li>
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-briefcase"></i> <span>TILLS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/app_tillsall"><i class="fa fa-circle-o text-aqua"></i> All <small class="label pull-right bg-aqua" id="lblapp_tillsall"></small> </a></li>
-                <li><a href="/app_tillsapproved"><i class="fa fa-circle-o text-green"></i> Approved <small class="label pull-right bg-green" id="lblapp_tillsapproved"></small> </a></li>
-                <li><a href="/app_tillspending"><i class="fa fa-circle-o text-yellow"></i> Pending <small class="label pull-right bg-yellow" id="lblapp_tillspending"></small> </a></li>
-                <li><a href="/app_tillsrejected"><i class="fa fa-circle-o text-red"></i> Rejected <small class="label pull-right bg-red" id="lblapp_tillsrejected"></small> </a></li>
-               
-              </ul>
-              <!--vcard-->
-            </li>
-            <li class="treeview">
-              <a href="#"><i class="fa fa-vcard"></i> <span>OPERATORS</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/operators"><i class="fa fa-circle-o text-aqua"></i> All</a></li>
-                <!---
-                <li><a href="#"><i class="fa fa-circle-o text-green"></i> Approved</a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Pending</a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> Rejected</a></li>
-              -->
-               
-              </ul>
-              <!--vcard-->
-            </li>
-            
-          </ul>
-        </li>
-
-
-
-
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-bookmark"></i>
-            <span>RESERVATIONS</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="treenode"><a href="/tillsreserved"><i class="fa fa-circle-o"></i>Reserved Tills</a></li>
-            <li class="treenode"><a href="/shortcodesreserved"><i class="fa fa-circle-o"></i>Reserved ShortCodes</a></li>
-          </ul>
-        </li>
-
-
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-line-chart"></i>
-              <span>CREDIT SCORE</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="/creditscoreupload"><i class="fa fa-circle-o"></i>Upload Credit Score</a></li>
-              <li><a href="/creditscore"><i class="fa fa-circle-o"></i>View Credit Score</a></li>
-
-
-            </ul>
-          </li>
 
         <li class="treeview">
 

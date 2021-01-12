@@ -1,17 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 import React,{Component} from 'react';
+import http from "./http-common";
 import MUIDataTable from "mui-datatables";
 import {createMuiTheme, MuiThemeProvider, withStyles} from "@material-ui/core/styles";
 
-const columns = ["Name", "Company", "City", "State"];
-
+const columns = ["Name", "Balance"];
+{/*
 const data = [
  ["Joe James", "Test Corp", "Yonkers", "NY"],
  ["John Walsh", "Test Corp", "Hartford", "CT"],
  ["Bob Herm", "Test Corp", "Tampa", "FL"],
  ["James Houston", "Test Corp", "Dallas", "TX"],
 ];
+*/}
+var users =[];
+
 
 const options = {
   filterType: 'checkbox',
@@ -23,8 +25,16 @@ const options = {
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {color:'red',brand:'BMW'};
+   //this.state = {users:[]}
+  {/*} this.state = {color:'red',brand:'BMW'}; */}
+  this.state = {
+    page: 0,
+    count: 10,
+    data: [],
+  };
+
   }
+
   getMuiTheme = () =>
     createMuiTheme({
       overrides: {
@@ -43,7 +53,8 @@ class App extends Component {
         },
         MUIDataTableHeadCell: {
           root: {
-            color: 'orange',
+           // color: 'red',
+            fontWeight:'bold'
           }
         },
         MUIDataTablePagination: {
@@ -53,51 +64,60 @@ class App extends Component {
         }
       }
     });
+
+    getData =(page, rowsPerPage) => {
+      http.get('users').then(response => {
+        return response.data.users;
+      })
+      .then(data=> {
+      // data = data.map(el => Object.values(el));
+       data = data.map(item => { return [item.name,item.balance,]})
+      this.setState({page, data,});
+
+      });
+
+    }
   componentDidMount()
     {
-      setTimeout(() => {
-        this.setState({color: "blublacke"})
-      }, 1000)
-    }
-    changeColor =() =>{
-      this.setState({color: 'changed',brand:'subaru',wheels:'4'})
-    }
-    componentDidUpdate() {
-      console.log('updated to-->'+this.state.color);
+      this.getData(this.state.page, this.state.count);
     }
   render()
   {
+    //const { data } = this.state;
+   // const data = this.state.data;
+   const { data, page, count } = this.state;
     return(
       <div>
-        <div class="box box3d">
-          <div class="box-body">
-          <div class="panel panel-default">
-          <div class="panel-heading">
-            ssss
+        <div className="box box3d">
+          <div className="box-body">
+          <div className="panel panel-default">
+          <div className="panel-heading">
+            USERS
           </div>
-          <div class="panel-body">
-            <h1>The color here is {this.state.color} and car is {this.state.brand} with {this.state.wheels} wheels</h1>
-            <div class="row">
-              <div class ="col-md-2 ">
-                <input type ="text" class="form-control" value={this.state.color} />  
+          <div className="panel-body">
+       
+           {/* <h1>The color here is {this.state.color} and car is {this.state.brand} with {this.state.wheels} wheels</h1> */}
+            <div className="row">
+              <div className ="col-md-2 ">
+                <input type ="text" className="form-control" />  
               </div>
-              <div class ="col-md-3">
-                <button type="button" class="btn btn-warning" onClick={this.changeColor}>Change color</button>
+              <div className ="col-md-3">
+                <button type="button" className="btn btn-warning" onClick={this.changeColor}>Add User</button>
               </div>
             </div>
             <br/>
         
             <MuiThemeProvider theme={this.getMuiTheme()}>
             <MUIDataTable
-             
-              data={data}
+          
+            data ={data}
               columns={columns}
               options={options}
             />
             </MuiThemeProvider>
       
           </div>
-          <div class="panel-footer"></div>
+          <div className="panel-footer"></div>
 
           </div>
             
